@@ -37,6 +37,7 @@ exports.seed = async function(knex) {
 
   // Link all to Admin
   await knex('role_permissions').insert(createdPerms.map(p => ({ role_id: adminRole.id, permission_id: p.id })));
+
   // Link some to Dentist
   const dentistPerms = createdPerms.filter(p => ['patient:view', 'clinical:record'].includes(p.code));
   await knex('role_permissions').insert(dentistPerms.map(p => ({ role_id: dentistRole.id, permission_id: p.id })));

@@ -2,13 +2,6 @@
 
 A full-featured Dental Record Management System tailored for local network (LAN) deployment in the Philippines.
 
-## 🚀 Features
-- **Patient Management**: Secure storage with AES-256 encryption (RA 10173 compliant).
-- **Clinical Workspace**: Record procedures with automatic inventory deduction.
-- **Billing & Invoicing**: Professional A4 printable invoices in PHP.
-- **Inventory Tracking**: Manage dental supplies and low-stock alerts.
-- **RBAC**: Customizable permissions for Admin, Dentist, and Staff.
-
 ## 🛠 Tech Stack
 - **Frontend**: Vue.js 3 + Vuetify (Javascript)
 - **Backend**: Node.js + Fastify
@@ -26,11 +19,8 @@ A full-featured Dental Record Management System tailored for local network (LAN)
 ```bash
 cd backend
 npm install
-# Run migrations
 npx knex migrate:latest
-# Run seeds
 npx knex seed:run
-# Start dev server
 npm run dev
 ```
 ### Frontend
@@ -41,9 +31,7 @@ npm run dev
 ```
 
 ## 📄 API Documentation
-Access the interactive Swagger documentation at:
-`http://localhost:3000/docs`
+Access the interactive Swagger documentation at `http://localhost:3000/docs`.
 
 ## 🔐 Security
-- Sensitive data is encrypted at the application layer.
-- Ensure the `ENCRYPTION_KEY` in `.env` is kept secure and backed up.
+Sensitive patient data is encrypted at the application layer using AES-256 (RA 10173 compliant).
